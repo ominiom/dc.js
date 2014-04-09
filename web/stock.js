@@ -11,7 +11,7 @@ var gainOrLossChart = dc.pieChart("#gain-loss-chart");
 var fluctuationChart = dc.barChart("#fluctuation-chart");
 var quarterChart = dc.pieChart("#quarter-chart");
 var dayOfWeekChart = dc.rowChart("#day-of-week-chart");
-var moveChart = dc.lineChart("#monthly-move-chart");
+var moveChart = dc.barChart("#monthly-move-chart");
 var volumeChart = dc.barChart("#monthly-volume-chart");
 var yearlyBubbleChart = dc.bubbleChart("#yearly-bubble-chart");
 
@@ -337,7 +337,6 @@ d3.csv("ndx.csv", function (data) {
     //#### Stacked Area Chart
     //Specify an area chart, by using a line chart with `.renderArea(true)`
     moveChart
-        .renderArea(true)
         .width(990)
         .height(200)
         .transitionDuration(1000)
